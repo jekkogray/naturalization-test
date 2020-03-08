@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<header>
+<title>USCIS Practice Exam</title>
+</header>
+<body>
+    <div name = "title"><p> USCIS Exam </p></div>
+    <center><form name = "username" method="GET" action="">
+        <label for="fname">Enter First Name:</label>
+        <input type="text" id="fname" name="fname"></label><br><br>
+        <label for="lname">Enter Last Name:</label>
+        <input type="text" id="lname" name="lname"></label><br><br>
+        <input type="button" value="Log in" onclick="testResults(this.form)"> </form>
+    </form></center>
+
+    <script>
+        var fname;
+        var lname; 
+        function testResults(form){
+            fname = form.fname.value;
+            lname = form.lname.value;
+            sessionStorage.setItem("fname", fname);
+            sessionStorage.setItem("lname",lname);
+            window.location.replace("http://localhost:3000/naturalization-test.html") 
+        } 
+        
+    </script>
+</body>
+</html>
